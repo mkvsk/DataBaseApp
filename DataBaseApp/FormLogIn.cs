@@ -36,7 +36,7 @@ namespace DataBaseApp
 
                 if ((!(username.Equals("root")) || (username.Equals("enter username"))))
                 {
-                    textBoxDataToEnter.Text = " vvodi po-novoi";
+                    textBoxDataToEnter.Text = "try again";
                     textBoxDataToEnter.ForeColor = darkRed;
                     buttonNextStep.BackColor = Color.Silver;
                     this.ActiveControl = buttonNextStep;
