@@ -70,11 +70,13 @@ namespace DataBaseApp
             this.buttonRegisterNewClient = new System.Windows.Forms.Button();
             this.buttonSaveNewClient = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.buttonCloseApp = new System.Windows.Forms.Button();
             full_nameLabel = new System.Windows.Forms.Label();
             phone_numberLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             registration_dateLabel = new System.Windows.Forms.Label();
             subsLabel = new System.Windows.Forms.Label();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
@@ -140,6 +142,7 @@ namespace DataBaseApp
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(67)))), ((int)(((byte)(143)))));
+            this.panel2.Controls.Add(this.buttonCloseApp);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -429,6 +432,25 @@ namespace DataBaseApp
             this.panel4.Size = new System.Drawing.Size(828, 174);
             this.panel4.TabIndex = 13;
             // 
+            // buttonCloseApp
+            // 
+            this.buttonCloseApp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCloseApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(207)))), ((int)(((byte)(204)))));
+            this.buttonCloseApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCloseApp.FlatAppearance.BorderSize = 0;
+            this.buttonCloseApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.buttonCloseApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(207)))), ((int)(((byte)(204)))));
+            this.buttonCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCloseApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCloseApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(96)))), ((int)(((byte)(85)))));
+            this.buttonCloseApp.Location = new System.Drawing.Point(823, 12);
+            this.buttonCloseApp.Name = "buttonCloseApp";
+            this.buttonCloseApp.Size = new System.Drawing.Size(61, 27);
+            this.buttonCloseApp.TabIndex = 14;
+            this.buttonCloseApp.Text = "EXIT";
+            this.buttonCloseApp.UseVisualStyleBackColor = false;
+            this.buttonCloseApp.Click += new System.EventHandler(this.buttonCloseApp_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,11 +462,12 @@ namespace DataBaseApp
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DB";
             this.Load += new System.EventHandler(this.FormDB_Load);
+            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.clientsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
@@ -495,5 +518,6 @@ namespace DataBaseApp
         private System.Windows.Forms.Button buttonRegisterNewClient;
         private System.Windows.Forms.Button buttonSaveNewClient;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button buttonCloseApp;
     }
 }

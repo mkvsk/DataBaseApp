@@ -44,8 +44,13 @@ namespace DataBaseApp
 
         private void buttonSaveNewClient_Click(object sender, EventArgs e)
         {
-            clientsBindingSource.EndEdit();
-            clientsTableAdapter.Update(dataSet1);
+            //clientsBindingSource.EndEdit();
+            //clientsTableAdapter.Update(dataSet1);
+
+            new FormLogIn().Close();
+            
         }
+
+        private void buttonCloseApp_Click(object sender, EventArgs e) => System.Windows.Forms.Application.Exit();
     }
 }

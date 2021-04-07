@@ -36,7 +36,7 @@ namespace DataBaseApp
 
                 if ((!(username.Equals("root")) || (username.Equals("enter username"))))
                 {
-                    textBoxDataToEnter.Text = "try again";
+                    textBoxDataToEnter.Text = " try again";
                     textBoxDataToEnter.ForeColor = darkRed;
                     buttonNextStep.BackColor = Color.Silver;
                     this.ActiveControl = buttonNextStep;
@@ -100,8 +100,8 @@ namespace DataBaseApp
 
         private void openDB()
         {            
-            new FormMain().Show();
-            this.Hide();            
+            new FormMain().Show(); 
+            this.Hide();            //закрыть из мейна именно эту форму (без new) логина(this)
         }
 
         private void textBoxDataToEnter_Click(object sender, EventArgs e)
