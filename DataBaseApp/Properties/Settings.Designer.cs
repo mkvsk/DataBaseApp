@@ -32,5 +32,25 @@ namespace DataBaseApp.Properties {
                 return ((string)(this["ClientsBaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-1Q2BQKB;Initial Catalog=testDB;Integrated Security=True")]
+        public string testDBConnectionString {
+            get {
+                return ((string)(this["testDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-1Q2BQKB;Initial Catalog=kursach;Integrated Security=True")]
+        public string kursachConnectionString {
+            get {
+                return ((string)(this["kursachConnectionString"]));
+            }
+        }
     }
 }

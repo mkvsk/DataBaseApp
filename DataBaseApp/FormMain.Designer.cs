@@ -28,212 +28,108 @@ namespace DataBaseApp
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {
+        {          
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label full_nameLabel;
-            System.Windows.Forms.Label phone_numberLabel;
-            System.Windows.Forms.Label emailLabel;
-            System.Windows.Forms.Label registration_dateLabel;
-            System.Windows.Forms.Label subsLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.clientsDataGridView = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.Label idLabel;
+            System.Windows.Forms.Label first_nameLabel;
+            System.Windows.Forms.Label second_nameLabel;
+            System.Windows.Forms.Label middle_nameLabel;
+            System.Windows.Forms.Label phone_number_mainLabel;
+            System.Windows.Forms.Label phone_number_additionalLabel;
+            System.Windows.Forms.Label registration_dateLabel;
+            System.Windows.Forms.Label activityLabel;
+            System.Windows.Forms.Label tariff_planLabel;
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataSet1 = new DataBaseApp.DataSet1();
+            this.abonentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.abonentsTableAdapter = new DataBaseApp.DataSet1TableAdapters.abonentsTableAdapter();
+            this.tableAdapterManager = new DataBaseApp.DataSet1TableAdapters.TableAdapterManager();
+            this.abonentsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.abonentsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.abonentsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new DataBaseApp.DataSet1();
-            this.clientsTableAdapter = new DataBaseApp.DataSet1TableAdapters.clientsTableAdapter();
-            this.tableAdapterManager = new DataBaseApp.DataSet1TableAdapters.TableAdapterManager();
-            this.clientsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.clientsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.full_nameTextBox = new System.Windows.Forms.TextBox();
-            this.phone_numberTextBox = new System.Windows.Forms.TextBox();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.first_nameTextBox = new System.Windows.Forms.TextBox();
+            this.second_nameTextBox = new System.Windows.Forms.TextBox();
+            this.middle_nameTextBox = new System.Windows.Forms.TextBox();
+            this.phone_number_mainTextBox = new System.Windows.Forms.TextBox();
+            this.phone_number_additionalTextBox = new System.Windows.Forms.TextBox();
             this.registration_dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.subsTextBox = new System.Windows.Forms.TextBox();
-            this.buttonRegisterNewClient = new System.Windows.Forms.Button();
-            this.buttonSaveNewClient = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.buttonCloseApp = new System.Windows.Forms.Button();
-            full_nameLabel = new System.Windows.Forms.Label();
-            phone_numberLabel = new System.Windows.Forms.Label();
-            emailLabel = new System.Windows.Forms.Label();
+            this.activityCheckBox = new System.Windows.Forms.CheckBox();
+            this.tariff_planTextBox = new System.Windows.Forms.TextBox();
+            this.buttonExit = new System.Windows.Forms.Button();
+            idLabel = new System.Windows.Forms.Label();
+            first_nameLabel = new System.Windows.Forms.Label();
+            second_nameLabel = new System.Windows.Forms.Label();
+            middle_nameLabel = new System.Windows.Forms.Label();
+            phone_number_mainLabel = new System.Windows.Forms.Label();
+            phone_number_additionalLabel = new System.Windows.Forms.Label();
             registration_dateLabel = new System.Windows.Forms.Label();
-            subsLabel = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
+            activityLabel = new System.Windows.Forms.Label();
+            tariff_planLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingNavigator)).BeginInit();
-            this.clientsBindingNavigator.SuspendLayout();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.abonentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abonentsBindingNavigator)).BeginInit();
+            this.abonentsBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.abonentsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // full_nameLabel
+            // button1
             // 
-            full_nameLabel.AutoSize = true;
-            full_nameLabel.Location = new System.Drawing.Point(270, 32);
-            full_nameLabel.Name = "full_nameLabel";
-            full_nameLabel.Size = new System.Drawing.Size(52, 13);
-            full_nameLabel.TabIndex = 1;
-            full_nameLabel.Text = "full name:";
-            // 
-            // phone_numberLabel
-            // 
-            phone_numberLabel.AutoSize = true;
-            phone_numberLabel.Location = new System.Drawing.Point(270, 58);
-            phone_numberLabel.Name = "phone_numberLabel";
-            phone_numberLabel.Size = new System.Drawing.Size(78, 13);
-            phone_numberLabel.TabIndex = 3;
-            phone_numberLabel.Text = "phone number:";
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(270, 88);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(34, 13);
-            emailLabel.TabIndex = 5;
-            emailLabel.Text = "email:";
-            // 
-            // registration_dateLabel
-            // 
-            registration_dateLabel.AutoSize = true;
-            registration_dateLabel.Location = new System.Drawing.Point(270, 111);
-            registration_dateLabel.Name = "registration_dateLabel";
-            registration_dateLabel.Size = new System.Drawing.Size(85, 13);
-            registration_dateLabel.TabIndex = 7;
-            registration_dateLabel.Text = "registration date:";
-            // 
-            // subsLabel
-            // 
-            subsLabel.AutoSize = true;
-            subsLabel.Location = new System.Drawing.Point(270, 136);
-            subsLabel.Name = "subsLabel";
-            subsLabel.Size = new System.Drawing.Size(32, 13);
-            subsLabel.TabIndex = 9;
-            subsLabel.Text = "subs:";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(92)))), ((int)(((byte)(195)))));
-            this.panel1.Location = new System.Drawing.Point(0, 57);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(50, 680);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(67)))), ((int)(((byte)(143)))));
-            this.panel2.Controls.Add(this.buttonCloseApp);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(896, 73);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.clientsDataGridView);
-            this.panel3.Location = new System.Drawing.Point(56, 307);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(828, 369);
-            this.panel3.TabIndex = 2;
-            // 
-            // clientsDataGridView
-            // 
-            this.clientsDataGridView.AutoGenerateColumns = false;
-            this.clientsDataGridView.ColumnHeadersHeight = 30;
-            this.clientsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.clientsDataGridView.DataSource = this.clientsBindingSource;
-            this.clientsDataGridView.Location = new System.Drawing.Point(24, 30);
-            this.clientsDataGridView.Name = "clientsDataGridView";
-            this.clientsDataGridView.RowHeadersWidth = 30;
-            this.clientsDataGridView.Size = new System.Drawing.Size(779, 287);
-            this.clientsDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "full_name";
-            this.dataGridViewTextBoxColumn1.HeaderText = "full_name";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "phone_number";
-            this.dataGridViewTextBoxColumn2.HeaderText = "phone_number";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "email";
-            this.dataGridViewTextBoxColumn3.HeaderText = "email";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "registration_date";
-            this.dataGridViewTextBoxColumn4.HeaderText = "registration_date";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "subs";
-            this.dataGridViewTextBoxColumn5.HeaderText = "subs";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // clientsBindingSource
-            // 
-            this.clientsBindingSource.DataMember = "clients";
-            this.clientsBindingSource.DataSource = this.dataSet1;
+            this.button1.Location = new System.Drawing.Point(542, 171);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "DataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // clientsTableAdapter
+            // abonentsBindingSource
             // 
-            this.clientsTableAdapter.ClearBeforeFill = true;
+            this.abonentsBindingSource.DataMember = "abonents";
+            this.abonentsBindingSource.DataSource = this.dataSet1;
+            // 
+            // abonentsTableAdapter
+            // 
+            this.abonentsTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
+            this.tableAdapterManager.abonentsTableAdapter = this.abonentsTableAdapter;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.clientsTableAdapter = this.clientsTableAdapter;
-            this.tableAdapterManager.offersTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DataBaseApp.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // clientsBindingNavigator
+            // abonentsBindingNavigator
             // 
-            this.clientsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.clientsBindingNavigator.BindingSource = this.clientsBindingSource;
-            this.clientsBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.clientsBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.clientsBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.abonentsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.abonentsBindingNavigator.BindingSource = this.abonentsBindingSource;
+            this.abonentsBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.abonentsBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.abonentsBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -245,42 +141,17 @@ namespace DataBaseApp
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.clientsBindingNavigatorSaveItem});
-            this.clientsBindingNavigator.Location = new System.Drawing.Point(0, 73);
-            this.clientsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.clientsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.clientsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.clientsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.clientsBindingNavigator.Name = "clientsBindingNavigator";
-            this.clientsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.clientsBindingNavigator.Size = new System.Drawing.Size(896, 25);
-            this.clientsBindingNavigator.TabIndex = 3;
-            this.clientsBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.abonentsBindingNavigatorSaveItem});
+            this.abonentsBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.abonentsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.abonentsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.abonentsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.abonentsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.abonentsBindingNavigator.Name = "abonentsBindingNavigator";
+            this.abonentsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.abonentsBindingNavigator.Size = new System.Drawing.Size(1040, 25);
+            this.abonentsBindingNavigator.TabIndex = 1;
+            this.abonentsBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -315,9 +186,16 @@ namespace DataBaseApp
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -340,158 +218,330 @@ namespace DataBaseApp
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // clientsBindingNavigatorSaveItem
+            // bindingNavigatorAddNewItem
             // 
-            this.clientsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.clientsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("clientsBindingNavigatorSaveItem.Image")));
-            this.clientsBindingNavigatorSaveItem.Name = "clientsBindingNavigatorSaveItem";
-            this.clientsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.clientsBindingNavigatorSaveItem.Text = "Сохранить данные";
-            this.clientsBindingNavigatorSaveItem.Click += new System.EventHandler(this.clientsBindingNavigatorSaveItem_Click);
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
-            // full_nameTextBox
+            // bindingNavigatorDeleteItem
             // 
-            this.full_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientsBindingSource, "full_name", true));
-            this.full_nameTextBox.Location = new System.Drawing.Point(361, 29);
-            this.full_nameTextBox.Name = "full_nameTextBox";
-            this.full_nameTextBox.Size = new System.Drawing.Size(200, 20);
-            this.full_nameTextBox.TabIndex = 2;
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
-            // phone_numberTextBox
+            // abonentsBindingNavigatorSaveItem
             // 
-            this.phone_numberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientsBindingSource, "phone_number", true));
-            this.phone_numberTextBox.Location = new System.Drawing.Point(361, 55);
-            this.phone_numberTextBox.Name = "phone_numberTextBox";
-            this.phone_numberTextBox.Size = new System.Drawing.Size(200, 20);
-            this.phone_numberTextBox.TabIndex = 4;
+            this.abonentsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.abonentsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("abonentsBindingNavigatorSaveItem.Image")));
+            this.abonentsBindingNavigatorSaveItem.Name = "abonentsBindingNavigatorSaveItem";
+            this.abonentsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.abonentsBindingNavigatorSaveItem.Text = "Сохранить данные";
+            this.abonentsBindingNavigatorSaveItem.Click += new System.EventHandler(this.abonentsBindingNavigatorSaveItem_Click);
             // 
-            // emailTextBox
+            // abonentsDataGridView
             // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientsBindingSource, "email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(361, 81);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(200, 20);
-            this.emailTextBox.TabIndex = 6;
+            this.abonentsDataGridView.AutoGenerateColumns = false;
+            this.abonentsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.abonentsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewCheckBoxColumn1,
+            this.dataGridViewTextBoxColumn8});
+            this.abonentsDataGridView.DataSource = this.abonentsBindingSource;
+            this.abonentsDataGridView.Location = new System.Drawing.Point(42, 420);
+            this.abonentsDataGridView.Name = "abonentsDataGridView";
+            this.abonentsDataGridView.Size = new System.Drawing.Size(937, 220);
+            this.abonentsDataGridView.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "first_name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "first_name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "second_name";
+            this.dataGridViewTextBoxColumn3.HeaderText = "second_name";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "middle_name";
+            this.dataGridViewTextBoxColumn4.HeaderText = "middle_name";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "phone_number_main";
+            this.dataGridViewTextBoxColumn5.HeaderText = "phone_number_main";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "phone_number_additional";
+            this.dataGridViewTextBoxColumn6.HeaderText = "phone_number_additional";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "registration_date";
+            this.dataGridViewTextBoxColumn7.HeaderText = "registration_date";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "activity";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "activity";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "tariff_plan";
+            this.dataGridViewTextBoxColumn8.HeaderText = "tariff_plan";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(53, 77);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(18, 13);
+            idLabel.TabIndex = 3;
+            idLabel.Text = "id:";
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.abonentsBindingSource, "id", true));
+            this.idTextBox.Location = new System.Drawing.Point(185, 74);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(200, 20);
+            this.idTextBox.TabIndex = 4;
+            // 
+            // first_nameLabel
+            // 
+            first_nameLabel.AutoSize = true;
+            first_nameLabel.Location = new System.Drawing.Point(53, 103);
+            first_nameLabel.Name = "first_nameLabel";
+            first_nameLabel.Size = new System.Drawing.Size(55, 13);
+            first_nameLabel.TabIndex = 5;
+            first_nameLabel.Text = "first name:";
+            // 
+            // first_nameTextBox
+            // 
+            this.first_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.abonentsBindingSource, "first_name", true));
+            this.first_nameTextBox.Location = new System.Drawing.Point(185, 100);
+            this.first_nameTextBox.Name = "first_nameTextBox";
+            this.first_nameTextBox.Size = new System.Drawing.Size(200, 20);
+            this.first_nameTextBox.TabIndex = 6;
+            // 
+            // second_nameLabel
+            // 
+            second_nameLabel.AutoSize = true;
+            second_nameLabel.Location = new System.Drawing.Point(53, 129);
+            second_nameLabel.Name = "second_nameLabel";
+            second_nameLabel.Size = new System.Drawing.Size(74, 13);
+            second_nameLabel.TabIndex = 7;
+            second_nameLabel.Text = "second name:";
+            // 
+            // second_nameTextBox
+            // 
+            this.second_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.abonentsBindingSource, "second_name", true));
+            this.second_nameTextBox.Location = new System.Drawing.Point(185, 126);
+            this.second_nameTextBox.Name = "second_nameTextBox";
+            this.second_nameTextBox.Size = new System.Drawing.Size(200, 20);
+            this.second_nameTextBox.TabIndex = 8;
+            // 
+            // middle_nameLabel
+            // 
+            middle_nameLabel.AutoSize = true;
+            middle_nameLabel.Location = new System.Drawing.Point(53, 155);
+            middle_nameLabel.Name = "middle_nameLabel";
+            middle_nameLabel.Size = new System.Drawing.Size(69, 13);
+            middle_nameLabel.TabIndex = 9;
+            middle_nameLabel.Text = "middle name:";
+            // 
+            // middle_nameTextBox
+            // 
+            this.middle_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.abonentsBindingSource, "middle_name", true));
+            this.middle_nameTextBox.Location = new System.Drawing.Point(185, 152);
+            this.middle_nameTextBox.Name = "middle_nameTextBox";
+            this.middle_nameTextBox.Size = new System.Drawing.Size(200, 20);
+            this.middle_nameTextBox.TabIndex = 10;
+            // 
+            // phone_number_mainLabel
+            // 
+            phone_number_mainLabel.AutoSize = true;
+            phone_number_mainLabel.Location = new System.Drawing.Point(53, 181);
+            phone_number_mainLabel.Name = "phone_number_mainLabel";
+            phone_number_mainLabel.Size = new System.Drawing.Size(103, 13);
+            phone_number_mainLabel.TabIndex = 11;
+            phone_number_mainLabel.Text = "phone number main:";
+            // 
+            // phone_number_mainTextBox
+            // 
+            this.phone_number_mainTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.abonentsBindingSource, "phone_number_main", true));
+            this.phone_number_mainTextBox.Location = new System.Drawing.Point(185, 178);
+            this.phone_number_mainTextBox.Name = "phone_number_mainTextBox";
+            this.phone_number_mainTextBox.Size = new System.Drawing.Size(200, 20);
+            this.phone_number_mainTextBox.TabIndex = 12;
+            // 
+            // phone_number_additionalLabel
+            // 
+            phone_number_additionalLabel.AutoSize = true;
+            phone_number_additionalLabel.Location = new System.Drawing.Point(53, 207);
+            phone_number_additionalLabel.Name = "phone_number_additionalLabel";
+            phone_number_additionalLabel.Size = new System.Drawing.Size(126, 13);
+            phone_number_additionalLabel.TabIndex = 13;
+            phone_number_additionalLabel.Text = "phone number additional:";
+            // 
+            // phone_number_additionalTextBox
+            // 
+            this.phone_number_additionalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.abonentsBindingSource, "phone_number_additional", true));
+            this.phone_number_additionalTextBox.Location = new System.Drawing.Point(185, 204);
+            this.phone_number_additionalTextBox.Name = "phone_number_additionalTextBox";
+            this.phone_number_additionalTextBox.Size = new System.Drawing.Size(200, 20);
+            this.phone_number_additionalTextBox.TabIndex = 14;
+            // 
+            // registration_dateLabel
+            // 
+            registration_dateLabel.AutoSize = true;
+            registration_dateLabel.Location = new System.Drawing.Point(53, 234);
+            registration_dateLabel.Name = "registration_dateLabel";
+            registration_dateLabel.Size = new System.Drawing.Size(85, 13);
+            registration_dateLabel.TabIndex = 15;
+            registration_dateLabel.Text = "registration date:";
             // 
             // registration_dateDateTimePicker
             // 
-            this.registration_dateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientsBindingSource, "registration_date", true));
-            this.registration_dateDateTimePicker.Location = new System.Drawing.Point(361, 107);
+            this.registration_dateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.abonentsBindingSource, "registration_date", true));
+            this.registration_dateDateTimePicker.Location = new System.Drawing.Point(185, 230);
             this.registration_dateDateTimePicker.Name = "registration_dateDateTimePicker";
             this.registration_dateDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.registration_dateDateTimePicker.TabIndex = 8;
+            this.registration_dateDateTimePicker.TabIndex = 16;
             // 
-            // subsTextBox
+            // activityLabel
             // 
-            this.subsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientsBindingSource, "subs", true));
-            this.subsTextBox.Location = new System.Drawing.Point(361, 133);
-            this.subsTextBox.Name = "subsTextBox";
-            this.subsTextBox.Size = new System.Drawing.Size(200, 20);
-            this.subsTextBox.TabIndex = 10;
+            activityLabel.AutoSize = true;
+            activityLabel.Location = new System.Drawing.Point(53, 261);
+            activityLabel.Name = "activityLabel";
+            activityLabel.Size = new System.Drawing.Size(43, 13);
+            activityLabel.TabIndex = 17;
+            activityLabel.Text = "activity:";
             // 
-            // buttonRegisterNewClient
+            // activityCheckBox
             // 
-            this.buttonRegisterNewClient.Location = new System.Drawing.Point(24, 69);
-            this.buttonRegisterNewClient.Name = "buttonRegisterNewClient";
-            this.buttonRegisterNewClient.Size = new System.Drawing.Size(140, 41);
-            this.buttonRegisterNewClient.TabIndex = 11;
-            this.buttonRegisterNewClient.Text = "ADD NEW";
-            this.buttonRegisterNewClient.UseVisualStyleBackColor = true;
-            this.buttonRegisterNewClient.Click += new System.EventHandler(this.buttonRegisterNewClient_Click);
+            this.activityCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.abonentsBindingSource, "activity", true));
+            this.activityCheckBox.Location = new System.Drawing.Point(185, 256);
+            this.activityCheckBox.Name = "activityCheckBox";
+            this.activityCheckBox.Size = new System.Drawing.Size(200, 24);
+            this.activityCheckBox.TabIndex = 18;
+            this.activityCheckBox.Text = "checkBox1";
+            this.activityCheckBox.UseVisualStyleBackColor = true;
             // 
-            // buttonSaveNewClient
+            // tariff_planLabel
             // 
-            this.buttonSaveNewClient.Location = new System.Drawing.Point(655, 69);
-            this.buttonSaveNewClient.Name = "buttonSaveNewClient";
-            this.buttonSaveNewClient.Size = new System.Drawing.Size(140, 41);
-            this.buttonSaveNewClient.TabIndex = 12;
-            this.buttonSaveNewClient.Text = "SAVE";
-            this.buttonSaveNewClient.UseVisualStyleBackColor = true;
-            this.buttonSaveNewClient.Click += new System.EventHandler(this.buttonSaveNewClient_Click);
+            tariff_planLabel.AutoSize = true;
+            tariff_planLabel.Location = new System.Drawing.Point(53, 289);
+            tariff_planLabel.Name = "tariff_planLabel";
+            tariff_planLabel.Size = new System.Drawing.Size(53, 13);
+            tariff_planLabel.TabIndex = 19;
+            tariff_planLabel.Text = "tariff plan:";
             // 
-            // panel4
+            // tariff_planTextBox
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.buttonRegisterNewClient);
-            this.panel4.Controls.Add(full_nameLabel);
-            this.panel4.Controls.Add(this.buttonSaveNewClient);
-            this.panel4.Controls.Add(this.registration_dateDateTimePicker);
-            this.panel4.Controls.Add(subsLabel);
-            this.panel4.Controls.Add(registration_dateLabel);
-            this.panel4.Controls.Add(this.full_nameTextBox);
-            this.panel4.Controls.Add(this.subsTextBox);
-            this.panel4.Controls.Add(this.emailTextBox);
-            this.panel4.Controls.Add(phone_numberLabel);
-            this.panel4.Controls.Add(emailLabel);
-            this.panel4.Controls.Add(this.phone_numberTextBox);
-            this.panel4.Location = new System.Drawing.Point(56, 118);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(828, 174);
-            this.panel4.TabIndex = 13;
+            this.tariff_planTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.abonentsBindingSource, "tariff_plan", true));
+            this.tariff_planTextBox.Location = new System.Drawing.Point(185, 286);
+            this.tariff_planTextBox.Name = "tariff_planTextBox";
+            this.tariff_planTextBox.Size = new System.Drawing.Size(200, 20);
+            this.tariff_planTextBox.TabIndex = 20;
             // 
-            // buttonCloseApp
+            // buttonExit
             // 
-            this.buttonCloseApp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonCloseApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(207)))), ((int)(((byte)(204)))));
-            this.buttonCloseApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCloseApp.FlatAppearance.BorderSize = 0;
-            this.buttonCloseApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.buttonCloseApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(207)))), ((int)(((byte)(204)))));
-            this.buttonCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCloseApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCloseApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(96)))), ((int)(((byte)(85)))));
-            this.buttonCloseApp.Location = new System.Drawing.Point(823, 12);
-            this.buttonCloseApp.Name = "buttonCloseApp";
-            this.buttonCloseApp.Size = new System.Drawing.Size(61, 27);
-            this.buttonCloseApp.TabIndex = 14;
-            this.buttonCloseApp.Text = "EXIT";
-            this.buttonCloseApp.UseVisualStyleBackColor = false;
-            this.buttonCloseApp.Click += new System.EventHandler(this.buttonCloseApp_Click);
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonExit.ForeColor = System.Drawing.Color.Red;
+            this.buttonExit.Location = new System.Drawing.Point(947, 44);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(81, 31);
+            this.buttonExit.TabIndex = 21;
+            this.buttonExit.Text = "EXIT";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.ClientSize = new System.Drawing.Size(896, 705);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.clientsBindingNavigator);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(1040, 764);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(idLabel);
+            this.Controls.Add(this.idTextBox);
+            this.Controls.Add(first_nameLabel);
+            this.Controls.Add(this.first_nameTextBox);
+            this.Controls.Add(second_nameLabel);
+            this.Controls.Add(this.second_nameTextBox);
+            this.Controls.Add(middle_nameLabel);
+            this.Controls.Add(this.middle_nameTextBox);
+            this.Controls.Add(phone_number_mainLabel);
+            this.Controls.Add(this.phone_number_mainTextBox);
+            this.Controls.Add(phone_number_additionalLabel);
+            this.Controls.Add(this.phone_number_additionalTextBox);
+            this.Controls.Add(registration_dateLabel);
+            this.Controls.Add(this.registration_dateDateTimePicker);
+            this.Controls.Add(activityLabel);
+            this.Controls.Add(this.activityCheckBox);
+            this.Controls.Add(tariff_planLabel);
+            this.Controls.Add(this.tariff_planTextBox);
+            this.Controls.Add(this.abonentsDataGridView);
+            this.Controls.Add(this.abonentsBindingNavigator);
+            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMain";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DB";
-            this.Load += new System.EventHandler(this.FormDB_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.clientsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
+            this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingNavigator)).EndInit();
-            this.clientsBindingNavigator.ResumeLayout(false);
-            this.clientsBindingNavigator.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.abonentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abonentsBindingNavigator)).EndInit();
+            this.abonentsBindingNavigator.ResumeLayout(false);
+            this.abonentsBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.abonentsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        #endregion              
+        private System.Windows.Forms.Button button1;
         private DataSet1 dataSet1;
-        private System.Windows.Forms.BindingSource clientsBindingSource;
-        private DataSet1TableAdapters.clientsTableAdapter clientsTableAdapter;
+        private System.Windows.Forms.BindingSource abonentsBindingSource;
+        private DataSet1TableAdapters.abonentsTableAdapter abonentsTableAdapter;
         private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator clientsBindingNavigator;
+        private System.Windows.Forms.BindingNavigator abonentsBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -503,21 +553,26 @@ namespace DataBaseApp
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton clientsBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView clientsDataGridView;
+        private System.Windows.Forms.ToolStripButton abonentsBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView abonentsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.TextBox full_nameTextBox;
-        private System.Windows.Forms.TextBox phone_numberTextBox;
-        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.TextBox first_nameTextBox;
+        private System.Windows.Forms.TextBox second_nameTextBox;
+        private System.Windows.Forms.TextBox middle_nameTextBox;
+        private System.Windows.Forms.TextBox phone_number_mainTextBox;
+        private System.Windows.Forms.TextBox phone_number_additionalTextBox;
         private System.Windows.Forms.DateTimePicker registration_dateDateTimePicker;
-        private System.Windows.Forms.TextBox subsTextBox;
-        private System.Windows.Forms.Button buttonRegisterNewClient;
-        private System.Windows.Forms.Button buttonSaveNewClient;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button buttonCloseApp;
+        private System.Windows.Forms.CheckBox activityCheckBox;
+        private System.Windows.Forms.TextBox tariff_planTextBox;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

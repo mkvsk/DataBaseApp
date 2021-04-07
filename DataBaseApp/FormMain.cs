@@ -14,43 +14,25 @@ namespace DataBaseApp
     {
         public FormMain()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
+       private void button1_Click(object sender, EventArgs e) => System.Windows.Forms.Application.Exit();
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void clientsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void abonentsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.clientsBindingSource.EndEdit();
+            this.abonentsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dataSet1);
 
         }
 
-        private void FormDB_Load(object sender, EventArgs e)
+        private void FormMain_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataSet1.clients". При необходимости она может быть перемещена или удалена.
-            this.clientsTableAdapter.Fill(this.dataSet1.clients);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataSet1.abonents". При необходимости она может быть перемещена или удалена.
+            this.abonentsTableAdapter.Fill(this.dataSet1.abonents);
 
         }
 
-        private void buttonRegisterNewClient_Click(object sender, EventArgs e)
-        {
-            clientsBindingSource.AddNew();
-        }
-
-        private void buttonSaveNewClient_Click(object sender, EventArgs e)
-        {
-            //clientsBindingSource.EndEdit();
-            //clientsTableAdapter.Update(dataSet1);
-
-            new FormLogIn().Close();
-            
-        }
-
-        private void buttonCloseApp_Click(object sender, EventArgs e) => System.Windows.Forms.Application.Exit();
+        private void buttonExit_Click(object sender, EventArgs e) => System.Windows.Forms.Application.Exit();
     }
 }
