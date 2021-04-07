@@ -34,5 +34,18 @@ namespace DataBaseApp
         }
 
         private void buttonExit_Click(object sender, EventArgs e) => System.Windows.Forms.Application.Exit();
+
+        private void buttonAddNew_Click(object sender, EventArgs e)
+        {
+            abonentsBindingSource.AddNew();
+
+            panelFillData.Visible = true;
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            abonentsBindingSource.EndEdit();
+            abonentsTableAdapter.Update(dataSet1);
+        }
     }
 }

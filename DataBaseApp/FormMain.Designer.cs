@@ -40,7 +40,7 @@ namespace DataBaseApp
             System.Windows.Forms.Label registration_dateLabel;
             System.Windows.Forms.Label activityLabel;
             System.Windows.Forms.Label tariff_planLabel;
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAddNew = new System.Windows.Forms.Button();
             this.dataSet1 = new DataBaseApp.DataSet1();
             this.abonentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.abonentsTableAdapter = new DataBaseApp.DataSet1TableAdapters.abonentsTableAdapter();
@@ -78,6 +78,8 @@ namespace DataBaseApp
             this.activityCheckBox = new System.Windows.Forms.CheckBox();
             this.tariff_planTextBox = new System.Windows.Forms.TextBox();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.panelFillData = new System.Windows.Forms.Panel();
+            this.buttonSave = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             first_nameLabel = new System.Windows.Forms.Label();
             second_nameLabel = new System.Windows.Forms.Label();
@@ -92,16 +94,18 @@ namespace DataBaseApp
             ((System.ComponentModel.ISupportInitialize)(this.abonentsBindingNavigator)).BeginInit();
             this.abonentsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.abonentsDataGridView)).BeginInit();
+            this.panelFillData.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonAddNew
             // 
-            this.button1.Location = new System.Drawing.Point(542, 171);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAddNew.Location = new System.Drawing.Point(42, 50);
+            this.buttonAddNew.Name = "buttonAddNew";
+            this.buttonAddNew.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddNew.TabIndex = 0;
+            this.buttonAddNew.Text = "ADD NEW";
+            this.buttonAddNew.UseVisualStyleBackColor = true;
+            this.buttonAddNew.Click += new System.EventHandler(this.buttonAddNew_Click);
             // 
             // dataSet1
             // 
@@ -263,7 +267,7 @@ namespace DataBaseApp
             this.dataGridViewCheckBoxColumn1,
             this.dataGridViewTextBoxColumn8});
             this.abonentsDataGridView.DataSource = this.abonentsBindingSource;
-            this.abonentsDataGridView.Location = new System.Drawing.Point(42, 420);
+            this.abonentsDataGridView.Location = new System.Drawing.Point(42, 438);
             this.abonentsDataGridView.Name = "abonentsDataGridView";
             this.abonentsDataGridView.Size = new System.Drawing.Size(937, 220);
             this.abonentsDataGridView.TabIndex = 2;
@@ -326,24 +330,26 @@ namespace DataBaseApp
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(53, 77);
+            idLabel.Location = new System.Drawing.Point(38, 9);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(18, 13);
             idLabel.TabIndex = 3;
             idLabel.Text = "id:";
+            idLabel.Visible = false;
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.abonentsBindingSource, "id", true));
-            this.idTextBox.Location = new System.Drawing.Point(185, 74);
+            this.idTextBox.Location = new System.Drawing.Point(170, 6);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(200, 20);
             this.idTextBox.TabIndex = 4;
+            this.idTextBox.Visible = false;
             // 
             // first_nameLabel
             // 
             first_nameLabel.AutoSize = true;
-            first_nameLabel.Location = new System.Drawing.Point(53, 103);
+            first_nameLabel.Location = new System.Drawing.Point(38, 32);
             first_nameLabel.Name = "first_nameLabel";
             first_nameLabel.Size = new System.Drawing.Size(55, 13);
             first_nameLabel.TabIndex = 5;
@@ -352,7 +358,7 @@ namespace DataBaseApp
             // first_nameTextBox
             // 
             this.first_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.abonentsBindingSource, "first_name", true));
-            this.first_nameTextBox.Location = new System.Drawing.Point(185, 100);
+            this.first_nameTextBox.Location = new System.Drawing.Point(170, 29);
             this.first_nameTextBox.Name = "first_nameTextBox";
             this.first_nameTextBox.Size = new System.Drawing.Size(200, 20);
             this.first_nameTextBox.TabIndex = 6;
@@ -360,7 +366,7 @@ namespace DataBaseApp
             // second_nameLabel
             // 
             second_nameLabel.AutoSize = true;
-            second_nameLabel.Location = new System.Drawing.Point(53, 129);
+            second_nameLabel.Location = new System.Drawing.Point(38, 58);
             second_nameLabel.Name = "second_nameLabel";
             second_nameLabel.Size = new System.Drawing.Size(74, 13);
             second_nameLabel.TabIndex = 7;
@@ -369,7 +375,7 @@ namespace DataBaseApp
             // second_nameTextBox
             // 
             this.second_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.abonentsBindingSource, "second_name", true));
-            this.second_nameTextBox.Location = new System.Drawing.Point(185, 126);
+            this.second_nameTextBox.Location = new System.Drawing.Point(170, 55);
             this.second_nameTextBox.Name = "second_nameTextBox";
             this.second_nameTextBox.Size = new System.Drawing.Size(200, 20);
             this.second_nameTextBox.TabIndex = 8;
@@ -377,7 +383,7 @@ namespace DataBaseApp
             // middle_nameLabel
             // 
             middle_nameLabel.AutoSize = true;
-            middle_nameLabel.Location = new System.Drawing.Point(53, 155);
+            middle_nameLabel.Location = new System.Drawing.Point(38, 84);
             middle_nameLabel.Name = "middle_nameLabel";
             middle_nameLabel.Size = new System.Drawing.Size(69, 13);
             middle_nameLabel.TabIndex = 9;
@@ -386,7 +392,7 @@ namespace DataBaseApp
             // middle_nameTextBox
             // 
             this.middle_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.abonentsBindingSource, "middle_name", true));
-            this.middle_nameTextBox.Location = new System.Drawing.Point(185, 152);
+            this.middle_nameTextBox.Location = new System.Drawing.Point(170, 81);
             this.middle_nameTextBox.Name = "middle_nameTextBox";
             this.middle_nameTextBox.Size = new System.Drawing.Size(200, 20);
             this.middle_nameTextBox.TabIndex = 10;
@@ -394,7 +400,7 @@ namespace DataBaseApp
             // phone_number_mainLabel
             // 
             phone_number_mainLabel.AutoSize = true;
-            phone_number_mainLabel.Location = new System.Drawing.Point(53, 181);
+            phone_number_mainLabel.Location = new System.Drawing.Point(38, 110);
             phone_number_mainLabel.Name = "phone_number_mainLabel";
             phone_number_mainLabel.Size = new System.Drawing.Size(103, 13);
             phone_number_mainLabel.TabIndex = 11;
@@ -403,7 +409,7 @@ namespace DataBaseApp
             // phone_number_mainTextBox
             // 
             this.phone_number_mainTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.abonentsBindingSource, "phone_number_main", true));
-            this.phone_number_mainTextBox.Location = new System.Drawing.Point(185, 178);
+            this.phone_number_mainTextBox.Location = new System.Drawing.Point(170, 107);
             this.phone_number_mainTextBox.Name = "phone_number_mainTextBox";
             this.phone_number_mainTextBox.Size = new System.Drawing.Size(200, 20);
             this.phone_number_mainTextBox.TabIndex = 12;
@@ -411,7 +417,7 @@ namespace DataBaseApp
             // phone_number_additionalLabel
             // 
             phone_number_additionalLabel.AutoSize = true;
-            phone_number_additionalLabel.Location = new System.Drawing.Point(53, 207);
+            phone_number_additionalLabel.Location = new System.Drawing.Point(406, 32);
             phone_number_additionalLabel.Name = "phone_number_additionalLabel";
             phone_number_additionalLabel.Size = new System.Drawing.Size(126, 13);
             phone_number_additionalLabel.TabIndex = 13;
@@ -420,7 +426,7 @@ namespace DataBaseApp
             // phone_number_additionalTextBox
             // 
             this.phone_number_additionalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.abonentsBindingSource, "phone_number_additional", true));
-            this.phone_number_additionalTextBox.Location = new System.Drawing.Point(185, 204);
+            this.phone_number_additionalTextBox.Location = new System.Drawing.Point(538, 29);
             this.phone_number_additionalTextBox.Name = "phone_number_additionalTextBox";
             this.phone_number_additionalTextBox.Size = new System.Drawing.Size(200, 20);
             this.phone_number_additionalTextBox.TabIndex = 14;
@@ -428,7 +434,7 @@ namespace DataBaseApp
             // registration_dateLabel
             // 
             registration_dateLabel.AutoSize = true;
-            registration_dateLabel.Location = new System.Drawing.Point(53, 234);
+            registration_dateLabel.Location = new System.Drawing.Point(406, 59);
             registration_dateLabel.Name = "registration_dateLabel";
             registration_dateLabel.Size = new System.Drawing.Size(85, 13);
             registration_dateLabel.TabIndex = 15;
@@ -437,7 +443,7 @@ namespace DataBaseApp
             // registration_dateDateTimePicker
             // 
             this.registration_dateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.abonentsBindingSource, "registration_date", true));
-            this.registration_dateDateTimePicker.Location = new System.Drawing.Point(185, 230);
+            this.registration_dateDateTimePicker.Location = new System.Drawing.Point(538, 55);
             this.registration_dateDateTimePicker.Name = "registration_dateDateTimePicker";
             this.registration_dateDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.registration_dateDateTimePicker.TabIndex = 16;
@@ -445,7 +451,7 @@ namespace DataBaseApp
             // activityLabel
             // 
             activityLabel.AutoSize = true;
-            activityLabel.Location = new System.Drawing.Point(53, 261);
+            activityLabel.Location = new System.Drawing.Point(406, 86);
             activityLabel.Name = "activityLabel";
             activityLabel.Size = new System.Drawing.Size(43, 13);
             activityLabel.TabIndex = 17;
@@ -454,7 +460,7 @@ namespace DataBaseApp
             // activityCheckBox
             // 
             this.activityCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.abonentsBindingSource, "activity", true));
-            this.activityCheckBox.Location = new System.Drawing.Point(185, 256);
+            this.activityCheckBox.Location = new System.Drawing.Point(538, 81);
             this.activityCheckBox.Name = "activityCheckBox";
             this.activityCheckBox.Size = new System.Drawing.Size(200, 24);
             this.activityCheckBox.TabIndex = 18;
@@ -464,7 +470,7 @@ namespace DataBaseApp
             // tariff_planLabel
             // 
             tariff_planLabel.AutoSize = true;
-            tariff_planLabel.Location = new System.Drawing.Point(53, 289);
+            tariff_planLabel.Location = new System.Drawing.Point(406, 114);
             tariff_planLabel.Name = "tariff_planLabel";
             tariff_planLabel.Size = new System.Drawing.Size(53, 13);
             tariff_planLabel.TabIndex = 19;
@@ -473,7 +479,7 @@ namespace DataBaseApp
             // tariff_planTextBox
             // 
             this.tariff_planTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.abonentsBindingSource, "tariff_plan", true));
-            this.tariff_planTextBox.Location = new System.Drawing.Point(185, 286);
+            this.tariff_planTextBox.Location = new System.Drawing.Point(538, 111);
             this.tariff_planTextBox.Name = "tariff_planTextBox";
             this.tariff_planTextBox.Size = new System.Drawing.Size(200, 20);
             this.tariff_planTextBox.TabIndex = 20;
@@ -495,32 +501,53 @@ namespace DataBaseApp
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // panelFillData
+            // 
+            this.panelFillData.BackColor = System.Drawing.Color.White;
+            this.panelFillData.Controls.Add(this.buttonSave);
+            this.panelFillData.Controls.Add(idLabel);
+            this.panelFillData.Controls.Add(this.tariff_planTextBox);
+            this.panelFillData.Controls.Add(tariff_planLabel);
+            this.panelFillData.Controls.Add(this.idTextBox);
+            this.panelFillData.Controls.Add(this.activityCheckBox);
+            this.panelFillData.Controls.Add(first_nameLabel);
+            this.panelFillData.Controls.Add(activityLabel);
+            this.panelFillData.Controls.Add(this.first_nameTextBox);
+            this.panelFillData.Controls.Add(this.registration_dateDateTimePicker);
+            this.panelFillData.Controls.Add(second_nameLabel);
+            this.panelFillData.Controls.Add(registration_dateLabel);
+            this.panelFillData.Controls.Add(this.second_nameTextBox);
+            this.panelFillData.Controls.Add(this.phone_number_additionalTextBox);
+            this.panelFillData.Controls.Add(middle_nameLabel);
+            this.panelFillData.Controls.Add(phone_number_additionalLabel);
+            this.panelFillData.Controls.Add(this.middle_nameTextBox);
+            this.panelFillData.Controls.Add(this.phone_number_mainTextBox);
+            this.panelFillData.Controls.Add(phone_number_mainLabel);
+            this.panelFillData.Location = new System.Drawing.Point(42, 83);
+            this.panelFillData.Name = "panelFillData";
+            this.panelFillData.Size = new System.Drawing.Size(878, 216);
+            this.panelFillData.TabIndex = 22;
+            this.panelFillData.Visible = false;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Location = new System.Drawing.Point(362, 169);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.TabIndex = 23;
+            this.buttonSave.Text = "SAVE";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // FormMain
             // 
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1040, 764);
+            this.Controls.Add(this.panelFillData);
             this.Controls.Add(this.buttonExit);
-            this.Controls.Add(idLabel);
-            this.Controls.Add(this.idTextBox);
-            this.Controls.Add(first_nameLabel);
-            this.Controls.Add(this.first_nameTextBox);
-            this.Controls.Add(second_nameLabel);
-            this.Controls.Add(this.second_nameTextBox);
-            this.Controls.Add(middle_nameLabel);
-            this.Controls.Add(this.middle_nameTextBox);
-            this.Controls.Add(phone_number_mainLabel);
-            this.Controls.Add(this.phone_number_mainTextBox);
-            this.Controls.Add(phone_number_additionalLabel);
-            this.Controls.Add(this.phone_number_additionalTextBox);
-            this.Controls.Add(registration_dateLabel);
-            this.Controls.Add(this.registration_dateDateTimePicker);
-            this.Controls.Add(activityLabel);
-            this.Controls.Add(this.activityCheckBox);
-            this.Controls.Add(tariff_planLabel);
-            this.Controls.Add(this.tariff_planTextBox);
             this.Controls.Add(this.abonentsDataGridView);
             this.Controls.Add(this.abonentsBindingNavigator);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonAddNew);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMain";
             this.Load += new System.EventHandler(this.FormMain_Load);
@@ -530,13 +557,15 @@ namespace DataBaseApp
             this.abonentsBindingNavigator.ResumeLayout(false);
             this.abonentsBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.abonentsDataGridView)).EndInit();
+            this.panelFillData.ResumeLayout(false);
+            this.panelFillData.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion              
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAddNew;
         private DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource abonentsBindingSource;
         private DataSet1TableAdapters.abonentsTableAdapter abonentsTableAdapter;
@@ -574,5 +603,7 @@ namespace DataBaseApp
         private System.Windows.Forms.CheckBox activityCheckBox;
         private System.Windows.Forms.TextBox tariff_planTextBox;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Panel panelFillData;
+        private System.Windows.Forms.Button buttonSave;
     }
 }
