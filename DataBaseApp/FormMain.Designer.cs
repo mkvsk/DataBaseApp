@@ -40,7 +40,6 @@ namespace DataBaseApp
             System.Windows.Forms.Label activityLabel;
             System.Windows.Forms.Label tariff_planLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.buttonExit = new System.Windows.Forms.Button();
             this.dataSet1 = new DataBaseApp.DataSet1();
             this.abonentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.abonentsTableAdapter = new DataBaseApp.DataSet1TableAdapters.abonentsTableAdapter();
@@ -80,9 +79,9 @@ namespace DataBaseApp
             this.buttonAddNew = new System.Windows.Forms.Button();
             this.buttonSaveNew = new System.Windows.Forms.Button();
             this.panelHeader = new System.Windows.Forms.Panel();
-            this.panelLeftSide = new System.Windows.Forms.Panel();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.panelDataToEnter = new System.Windows.Forms.Panel();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.panelLeftSide = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelRightSight = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -101,8 +100,8 @@ namespace DataBaseApp
             this.abonentsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.abonentsDataGridView)).BeginInit();
             this.panelHeader.SuspendLayout();
-            this.panelLeftSide.SuspendLayout();
             this.panelDataToEnter.SuspendLayout();
+            this.panelLeftSide.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -196,20 +195,6 @@ namespace DataBaseApp
             tariff_planLabel.Size = new System.Drawing.Size(71, 18);
             tariff_planLabel.TabIndex = 19;
             tariff_planLabel.Text = "tariff plan:";
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.buttonExit.FlatAppearance.BorderSize = 0;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.ForeColor = System.Drawing.Color.Red;
-            this.buttonExit.Location = new System.Drawing.Point(1164, 12);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(59, 21);
-            this.buttonExit.TabIndex = 0;
-            this.buttonExit.Text = "EXIT";
-            this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // dataSet1
             // 
@@ -535,7 +520,6 @@ namespace DataBaseApp
             // 
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(67)))), ((int)(((byte)(143)))));
             this.panelHeader.Controls.Add(this.panelDataToEnter);
-            this.panelHeader.Controls.Add(this.buttonExit);
             this.panelHeader.Controls.Add(this.abonentsBindingNavigator);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
@@ -543,15 +527,15 @@ namespace DataBaseApp
             this.panelHeader.Size = new System.Drawing.Size(1235, 90);
             this.panelHeader.TabIndex = 23;
             // 
-            // panelLeftSide
+            // panelDataToEnter
             // 
-            this.panelLeftSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(92)))), ((int)(((byte)(195)))));
-            this.panelLeftSide.Controls.Add(this.buttonAddNew);
-            this.panelLeftSide.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeftSide.Location = new System.Drawing.Point(0, 90);
-            this.panelLeftSide.Name = "panelLeftSide";
-            this.panelLeftSide.Size = new System.Drawing.Size(100, 695);
-            this.panelLeftSide.TabIndex = 24;
+            this.panelDataToEnter.BackColor = System.Drawing.Color.White;
+            this.panelDataToEnter.Controls.Add(this.textBoxSearch);
+            this.panelDataToEnter.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panelDataToEnter.Location = new System.Drawing.Point(71, 38);
+            this.panelDataToEnter.Name = "panelDataToEnter";
+            this.panelDataToEnter.Size = new System.Drawing.Size(440, 32);
+            this.panelDataToEnter.TabIndex = 25;
             // 
             // textBoxSearch
             // 
@@ -566,15 +550,15 @@ namespace DataBaseApp
             this.textBoxSearch.TabStop = false;
             this.textBoxSearch.Text = "search data ";
             // 
-            // panelDataToEnter
+            // panelLeftSide
             // 
-            this.panelDataToEnter.BackColor = System.Drawing.Color.White;
-            this.panelDataToEnter.Controls.Add(this.textBoxSearch);
-            this.panelDataToEnter.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panelDataToEnter.Location = new System.Drawing.Point(71, 38);
-            this.panelDataToEnter.Name = "panelDataToEnter";
-            this.panelDataToEnter.Size = new System.Drawing.Size(440, 32);
-            this.panelDataToEnter.TabIndex = 25;
+            this.panelLeftSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(92)))), ((int)(((byte)(195)))));
+            this.panelLeftSide.Controls.Add(this.buttonAddNew);
+            this.panelLeftSide.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeftSide.Location = new System.Drawing.Point(0, 90);
+            this.panelLeftSide.Name = "panelLeftSide";
+            this.panelLeftSide.Size = new System.Drawing.Size(100, 695);
+            this.panelLeftSide.TabIndex = 24;
             // 
             // panel1
             // 
@@ -631,10 +615,10 @@ namespace DataBaseApp
             this.Controls.Add(this.panelLeftSide);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.idTextBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exit";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMain_FormClosed);
             this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abonentsBindingSource)).EndInit();
@@ -644,9 +628,9 @@ namespace DataBaseApp
             ((System.ComponentModel.ISupportInitialize)(this.abonentsDataGridView)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
-            this.panelLeftSide.ResumeLayout(false);
             this.panelDataToEnter.ResumeLayout(false);
             this.panelDataToEnter.PerformLayout();
+            this.panelLeftSide.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -654,8 +638,6 @@ namespace DataBaseApp
             this.PerformLayout();
 
         }
-
-        private System.Windows.Forms.Button buttonExit;
         private DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource abonentsBindingSource;
         private DataSet1TableAdapters.abonentsTableAdapter abonentsTableAdapter;

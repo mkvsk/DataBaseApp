@@ -22,6 +22,7 @@ namespace DataBaseApp
         private static readonly Color lightViolet = Color.FromArgb(111, 92, 195);
         private static readonly Color bgGrey = Color.FromArgb(237, 237, 237);
         private static readonly Color lightGrey = Color.FromArgb(224, 224, 224);
+        private static readonly Color lightBlue = Color.FromArgb(145, 120, 255);
 
         public FormLogIn()
         {
@@ -148,7 +149,7 @@ namespace DataBaseApp
         {
             if (e.KeyCode == Keys.Enter)
             {
-                buttonNextStep_Click((object)sender, (EventArgs)e);                
+                buttonNextStep_Click((object)sender, (EventArgs)e);
             }
         }
 
@@ -161,12 +162,5 @@ namespace DataBaseApp
             }
         }
 
-        private void buttonNextStep_MouseEnter(object sender, EventArgs e)
-        {
-            if (username.Length > 2 || password.Length > 2)
-            {
-                buttonNextStep.BackColor = lightViolet;
-            }
-        }
     }    
 }

@@ -17,7 +17,7 @@ namespace DataBaseApp
             InitializeComponent();
         }
 
-        private void buttonExit_Click(object sender, EventArgs e) => System.Windows.Forms.Application.Exit();
+        //private void buttonExit_Click(object sender, EventArgs e) => System.Windows.Forms.Application.Exit();
 
         private void abonentsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -45,6 +45,9 @@ namespace DataBaseApp
             abonentsTableAdapter.Update(dataSet1);
         }
 
-
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }
