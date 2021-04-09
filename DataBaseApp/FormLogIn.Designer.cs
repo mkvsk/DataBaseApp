@@ -120,6 +120,8 @@ namespace DataBaseApp
             this.buttonNextStep.Text = "password";
             this.buttonNextStep.UseVisualStyleBackColor = false;
             this.buttonNextStep.Click += new System.EventHandler(this.buttonNextStep_Click);
+            this.buttonNextStep.MouseEnter += new System.EventHandler(this.buttonNextStep_MouseEnter);
+            this.buttonNextStep.MouseLeave += new System.EventHandler(this.buttonNextStep_MouseLeave);
             // 
             // panelDataToEnter
             // 

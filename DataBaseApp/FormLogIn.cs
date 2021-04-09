@@ -33,7 +33,6 @@ namespace DataBaseApp
             if (stepNumber == 1)
             {                
                 username = textBoxDataToEnter.Text;
-                buttonNextStep.BackColor = Color.Silver;
 
                 if ((!(username.Equals("root")) || (username.Equals("enter username"))))
                 {
@@ -137,7 +136,6 @@ namespace DataBaseApp
             if (username.Length > 2 || password.Length > 2)
             {
                 buttonNextStep.Enabled = true;
-                buttonNextStep.BackColor = lightViolet;
             }
             else if (username.Length <= 2 || password.Length <= 2)
             {
@@ -154,16 +152,21 @@ namespace DataBaseApp
             }
         }
 
-       // private void buttonNextStep_MouseEnter(object sender, EventArgs e)
-       // {
-         //   buttonNextStep.BackColor = darkRed;
-       //     buttonNextStep.ForeColor = lightGrey;
-       // }
 
-        //private void buttonNextStep_MouseLeave(object sender, EventArgs e)
-        //{
-          //  buttonNextStep.BackColor = Color.DarkSeaGreen;
-            //buttonNextStep.ForeColor = lightGrey;
-       // }
+        private void buttonNextStep_MouseLeave(object sender, EventArgs e)
+        {
+            if (username.Length > 2 || password.Length > 2)
+            {
+                buttonNextStep.BackColor = Color.Silver;
+            }
+        }
+
+        private void buttonNextStep_MouseEnter(object sender, EventArgs e)
+        {
+            if (username.Length > 2 || password.Length > 2)
+            {
+                buttonNextStep.BackColor = lightViolet;
+            }
+        }
     }    
 }
