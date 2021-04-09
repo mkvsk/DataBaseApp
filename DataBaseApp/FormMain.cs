@@ -33,5 +33,18 @@ namespace DataBaseApp
             this.abonentsTableAdapter.Fill(this.dataSet1.abonents);
 
         }
+
+        private void buttonAddNew_Click(object sender, EventArgs e)
+        {
+            abonentsBindingSource.AddNew();
+        }
+
+        private void buttonSaveNew_Click(object sender, EventArgs e)
+        {
+            abonentsBindingSource.EndEdit();
+            abonentsTableAdapter.Update(dataSet1);
+        }
+
+
     }
 }
