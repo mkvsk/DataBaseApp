@@ -29,7 +29,7 @@ namespace DataBaseApp
 
         }
 
-        private void buttonAddNew_Click(object sender, EventArgs e)
+        private void buttonAddNew_Click(object sender, EventArgs e) 
         {
             abonentsBindingSource.AddNew();
             panel2.Visible = true;
