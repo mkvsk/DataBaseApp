@@ -281,8 +281,6 @@ namespace DataBaseApp {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columntariff_plan;
-            
             private global::System.Data.DataColumn columnfirst_name;
             
             private global::System.Data.DataColumn columnsecond_name;
@@ -296,6 +294,8 @@ namespace DataBaseApp {
             private global::System.Data.DataColumn columnregistration_date;
             
             private global::System.Data.DataColumn columnactivity;
+            
+            private global::System.Data.DataColumn columntariff_plan;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -335,14 +335,6 @@ namespace DataBaseApp {
             public global::System.Data.DataColumn idColumn {
                 get {
                     return this.columnid;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn tariff_planColumn {
-                get {
-                    return this.columntariff_plan;
                 }
             }
             
@@ -404,6 +396,14 @@ namespace DataBaseApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn tariff_planColumn {
+                get {
+                    return this.columntariff_plan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -439,18 +439,18 @@ namespace DataBaseApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public abonentsRow AddabonentsRow(string tariff_plan, string first_name, string second_name, string middle_name, string phone_number_main, string phone_number_additional, System.DateTime registration_date, bool activity) {
+            public abonentsRow AddabonentsRow(string first_name, string second_name, string middle_name, string phone_number_main, string phone_number_additional, System.DateTime registration_date, bool activity, string tariff_plan) {
                 abonentsRow rowabonentsRow = ((abonentsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        tariff_plan,
                         first_name,
                         second_name,
                         middle_name,
                         phone_number_main,
                         phone_number_additional,
                         registration_date,
-                        activity};
+                        activity,
+                        tariff_plan};
                 rowabonentsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowabonentsRow);
                 return rowabonentsRow;
@@ -474,7 +474,6 @@ namespace DataBaseApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
-                this.columntariff_plan = base.Columns["tariff_plan"];
                 this.columnfirst_name = base.Columns["first_name"];
                 this.columnsecond_name = base.Columns["second_name"];
                 this.columnmiddle_name = base.Columns["middle_name"];
@@ -482,6 +481,7 @@ namespace DataBaseApp {
                 this.columnphone_number_additional = base.Columns["phone_number_additional"];
                 this.columnregistration_date = base.Columns["registration_date"];
                 this.columnactivity = base.Columns["activity"];
+                this.columntariff_plan = base.Columns["tariff_plan"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -489,8 +489,6 @@ namespace DataBaseApp {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columntariff_plan = new global::System.Data.DataColumn("tariff_plan", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntariff_plan);
                 this.columnfirst_name = new global::System.Data.DataColumn("first_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfirst_name);
                 this.columnsecond_name = new global::System.Data.DataColumn("second_name", typeof(string), null, global::System.Data.MappingType.Element);
@@ -505,6 +503,8 @@ namespace DataBaseApp {
                 base.Columns.Add(this.columnregistration_date);
                 this.columnactivity = new global::System.Data.DataColumn("activity", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnactivity);
+                this.columntariff_plan = new global::System.Data.DataColumn("tariff_plan", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntariff_plan);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnphone_number_main,
                                 this.columnphone_number_additional}, false));
@@ -513,7 +513,6 @@ namespace DataBaseApp {
                 this.columnid.AutoIncrementStep = -1;
                 this.columnid.AllowDBNull = false;
                 this.columnid.ReadOnly = true;
-                this.columntariff_plan.MaxLength = 50;
                 this.columnfirst_name.AllowDBNull = false;
                 this.columnfirst_name.MaxLength = 50;
                 this.columnsecond_name.AllowDBNull = false;
@@ -522,6 +521,7 @@ namespace DataBaseApp {
                 this.columnphone_number_main.AllowDBNull = false;
                 this.columnphone_number_main.MaxLength = 12;
                 this.columnphone_number_additional.MaxLength = 12;
+                this.columntariff_plan.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -675,22 +675,6 @@ namespace DataBaseApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string tariff_plan {
-                get {
-                    try {
-                        return ((string)(this[this.tableabonents.tariff_planColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'tariff_plan\' в таблице \'abonents\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableabonents.tariff_planColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string first_name {
                 get {
                     return ((string)(this[this.tableabonents.first_nameColumn]));
@@ -789,14 +773,18 @@ namespace DataBaseApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Istariff_planNull() {
-                return this.IsNull(this.tableabonents.tariff_planColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Settariff_planNull() {
-                this[this.tableabonents.tariff_planColumn] = global::System.Convert.DBNull;
+            public string tariff_plan {
+                get {
+                    try {
+                        return ((string)(this[this.tableabonents.tariff_planColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'tariff_plan\' в таблице \'abonents\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableabonents.tariff_planColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -845,6 +833,18 @@ namespace DataBaseApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetactivityNull() {
                 this[this.tableabonents.activityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Istariff_planNull() {
+                return this.IsNull(this.tableabonents.tariff_planColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Settariff_planNull() {
+                this[this.tableabonents.tariff_planColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1008,7 +1008,6 @@ namespace DataBaseApp.DataSet1TableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "abonents";
             tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("tariff_plan", "tariff_plan");
             tableMapping.ColumnMappings.Add("first_name", "first_name");
             tableMapping.ColumnMappings.Add("second_name", "second_name");
             tableMapping.ColumnMappings.Add("middle_name", "middle_name");
@@ -1016,12 +1015,12 @@ namespace DataBaseApp.DataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("phone_number_additional", "phone_number_additional");
             tableMapping.ColumnMappings.Add("registration_date", "registration_date");
             tableMapping.ColumnMappings.Add("activity", "activity");
+            tableMapping.ColumnMappings.Add("tariff_plan", "tariff_plan");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[abonents] ([tariff_plan], [first_name], [second_name], [middle_name], [phone_number_main], [phone_number_additional], [registration_date], [activity]) VALUES (@tariff_plan, @first_name, @second_name, @middle_name, @phone_number_main, @phone_number_additional, @registration_date, @activity)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[abonents] ([first_name], [second_name], [middle_name], [phone_number_main], [phone_number_additional], [registration_date], [activity], [tariff_plan]) VALUES (@first_name, @second_name, @middle_name, @phone_number_main, @phone_number_additional, @registration_date, @activity, @tariff_plan)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tariff_plan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tariff_plan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@first_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "first_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@second_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "second_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@middle_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "middle_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1029,6 +1028,7 @@ namespace DataBaseApp.DataSet1TableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@phone_number_additional", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phone_number_additional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@registration_date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "registration_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@activity", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "activity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tariff_plan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tariff_plan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1044,8 +1044,8 @@ namespace DataBaseApp.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, tariff_plan, first_name, second_name, middle_name, phone_number_main, " +
-                "phone_number_additional, registration_date, activity FROM dbo.abonents";
+            this._commandCollection[0].CommandText = "SELECT id, first_name, second_name, middle_name, phone_number_main, phone_number_" +
+                "additional, registration_date, activity, tariff_plan FROM dbo.abonents";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1106,54 +1106,54 @@ namespace DataBaseApp.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string tariff_plan, string first_name, string second_name, string middle_name, string phone_number_main, string phone_number_additional, global::System.Nullable<global::System.DateTime> registration_date, global::System.Nullable<bool> activity) {
-            if ((tariff_plan == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(tariff_plan));
-            }
+        public virtual int Insert(string first_name, string second_name, string middle_name, string phone_number_main, string phone_number_additional, global::System.Nullable<global::System.DateTime> registration_date, global::System.Nullable<bool> activity, string tariff_plan) {
             if ((first_name == null)) {
                 throw new global::System.ArgumentNullException("first_name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(first_name));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(first_name));
             }
             if ((second_name == null)) {
                 throw new global::System.ArgumentNullException("second_name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(second_name));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(second_name));
             }
             if ((middle_name == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(middle_name));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(middle_name));
             }
             if ((phone_number_main == null)) {
                 throw new global::System.ArgumentNullException("phone_number_main");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(phone_number_main));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(phone_number_main));
             }
             if ((phone_number_additional == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(phone_number_additional));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(phone_number_additional));
             }
             if ((registration_date.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(registration_date.Value));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(registration_date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((activity.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(activity.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((activity.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((bool)(activity.Value));
+            if ((tariff_plan == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(tariff_plan));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 

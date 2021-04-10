@@ -32,12 +32,19 @@ namespace DataBaseApp
         private void buttonAddNew_Click(object sender, EventArgs e)
         {
             abonentsBindingSource.AddNew();
+            panel2.Visible = true;
         }
 
-        private void buttonSaveAndUpdate_Click(object sender, EventArgs e)
+        private void buttonSave_Click(object sender, EventArgs e)
         {
             abonentsBindingSource.EndEdit();
             abonentsTableAdapter.Update(dataSet1);
-        } 
+        }
+
+        private void abonentsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
