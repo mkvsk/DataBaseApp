@@ -140,7 +140,7 @@ namespace DataBaseApp
             this.pictureBoxPassword.Location = new System.Drawing.Point(15, 10);
             this.pictureBoxPassword.Name = "pictureBoxPassword";
             this.pictureBoxPassword.Size = new System.Drawing.Size(36, 36);
-            this.pictureBoxPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxPassword.TabIndex = 2;
             this.pictureBoxPassword.TabStop = false;
             this.pictureBoxPassword.Visible = false;
