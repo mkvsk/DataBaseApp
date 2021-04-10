@@ -17,14 +17,9 @@ namespace DataBaseApp
             InitializeComponent();
         }
 
-        //private void buttonExit_Click(object sender, EventArgs e) => System.Windows.Forms.Application.Exit();
-
-        private void abonentsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Validate();
-            this.abonentsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dataSet1);
-
+            System.Windows.Forms.Application.Exit();
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -39,15 +34,10 @@ namespace DataBaseApp
             abonentsBindingSource.AddNew();
         }
 
-        private void buttonSaveNew_Click(object sender, EventArgs e)
+        private void buttonSaveAndUpdate_Click(object sender, EventArgs e)
         {
             abonentsBindingSource.EndEdit();
             abonentsTableAdapter.Update(dataSet1);
-        }
-
-        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
-        }
+        } 
     }
 }

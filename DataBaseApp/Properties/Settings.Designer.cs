@@ -52,5 +52,15 @@ namespace DataBaseApp.Properties {
                 return ((string)(this["kursachConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-1Q2BQKB;Initial Catalog=mts_db;Integrated Security=True")]
+        public string mts_dbConnectionString {
+            get {
+                return ((string)(this["mts_dbConnectionString"]));
+            }
+        }
     }
 }
